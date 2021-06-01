@@ -1,0 +1,670 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------------
+  Font
+--------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Caviar-Dreams';
+    src: url("../fonts/CaviarDreams_Bold.eot?") format('eot'),
+    url("../fonts/CaviarDreams_Bold.woff2") format('woff2'),
+    url("../fonts/CaviarDreams_Bold.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: "ichigojam";
+    font-style: normal;
+    font-weight: 400;
+    src: local('IchigoJam-1.4'), local('IchigoJam-1.4-Regular'),
+         url("https://cdn.jsdelivr.net/gh/fu-sen/ichigojam-font@20190814/IchigoJam-1.4.woff") format('woff');
+}
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+/*--------------------------------------------------------------------
+  Reset
+--------------------------------------------------------------------*/
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, small, strong, b, dl, dt, dd, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td, article, figure, figcaption, footer, header, nav, section {
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+
+  border: 0;
+}
+
+article, figcaption, figure, footer, header, nav, section {
+  display: block;
+}
+
+html {
+  overflow-x: hidden;
+}
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  counter-reset: taskno;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button, select, input {
+  padding: 0;
+
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+
+  -webkit-appearance: none;
+
+  -moz-appearance: none;
+
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.5;
+}
+@media (min-width: 751px) {
+  a[href*="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 960px) {
+  html {
+    font-size: 58%;
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 52%;
+  }
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 46%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 41%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 39%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 37%;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 35%;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+
+  font-size: 1.4rem;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+  /* font-family:"游明朝","YuMincho","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝",serif; */
+  /* font-family: tbchibirgothicplusk-pro,sans-serif; */
+  /* font-family: maru-maru-gothic-clr-stdn, sans-serif; */
+  font-weight: 400;
+  font-style: normal;
+
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+@media (max-width: 750px) {
+  body {
+    font-size: 2.66667vw;
+  }
+}
+
+code.ichigojam
+{
+    font-family: 'ichigojam';
+    font-size: 1.8rem;
+    line-height: 2.3;
+    color: #ffffff;
+    background-color: #000000;
+    white-space: pre-wrap;
+    word-break: break-all;
+    padding: 0.8vw 1%;
+}
+@media (min-width: 1280px) {
+  code.ichigojam {
+    padding: 10px 1%;
+  }
+}
+
+/* ======================================================================
+EFFECT
+========================================================================= */
+.effect-fade {
+  opacity : 0;
+  transform : translate(0, 45px);
+  transition : all 1000ms ease;
+}
+.effect-fade-left-delay {
+  opacity : 0;
+  transform : translate(-45px, 0px);
+  transition : all 800ms ease 0.9s
+}
+.effect-fade-right-delay {
+  opacity : 0;
+  transform : translate(45px, 0px);
+  transition : all 800ms ease 0.9s
+}
+.effect-fade-right-delay2 {
+  opacity : 0;
+  transform : translate(45px, 0px);
+  transition : all 800ms ease 1.2s
+}
+.effect-fade-delay1 {
+  opacity : 0;
+  transform : translate(0px, 45px);
+  transition : all 1000ms ease 0.8s
+}
+.effect-fade-delay2 {
+  opacity : 0;
+  transform : translate(0px, 45px);
+  transition : all 800ms ease 1.1s
+}
+.effect-fade-delay3 {
+  opacity : 0;
+  transform : translate(0px, 45px);
+  transition : all 800ms ease 1.4s
+}
+.effect-fade-delay4 {
+  opacity : 0;
+  transform : translate(0px, 45px);
+  transition : all 1000ms ease 1.6s
+}
+
+.effect-fade.effect-scroll,
+.effect-fade-left-delay.effect-scroll,
+.effect-fade-right-delay.effect-scroll,
+.effect-fade-right-delay2.effect-scroll,
+.effect-fade-delay1.effect-scroll,
+.effect-fade-delay2.effect-scroll,
+.effect-fade-delay3.effect-scroll,
+.effect-fade-delay4.effect-scroll {
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.gray {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.opacity04 {
+  opacity:0.4;
+}
+.opacity05 {
+  opacity:0.5;
+}
+.opacity06 {
+  opacity:0.6;
+}
+.opacity07 {
+  opacity:0.7;
+}
+.opacity08 {
+  opacity:0.8;
+}
+.opacity09 {
+  opacity:0.9;
+}
+
+
+.topBtn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:block;
+  background-color:#8D7A6D;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:10px;
+  width:60px;
+  height:60px;
+  text-align:center;
+  line-height:22px;
+  border-radius:30px;
+  padding-top:30px;
+  box-sizing:border-box;
+  z-index: 100;
+}
+.topBtn:before {
+  content:'\25B2';
+  position:absolute;
+  top:10px;
+  left:0;
+  width:100%;
+  text-align:center;
+  font-size:18px;
+}
+.topBtn:hover {
+  opacity:0.7;
+}
+.wrapper {
+  position:relative;
+}
+
+/* ======================================================================
+index.html
+========================================================================= */
+.l-pt-wrapper{
+  height: 100%;
+  min-height: 150vh;
+  position: relative;
+  padding-bottom: 1vw;
+  box-sizing: border-box;
+}
+
+.l-pt-header {
+  position:static;
+  width: 100%;
+  height: auto;
+  margin: 1vw auto;
+  overflow-x:hidden;
+}
+
+.l-pt-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.l-pt-header-wrap {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.l-pt-header-logo {
+  width: 100%;
+  margin-bottom: 1vw;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  justify-content: start;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+
+  /* background-color: #8D7A6D; */
+}
+.l-pt-header-logo-en {
+  width: 50%;
+  height: 2vw;
+  padding-left: 2%;
+  /* background-color:#E85382; */
+}
+.l-pt-header-logo-img {
+  width: 50%;
+  height: 2vw;
+  text-align: right;
+  padding-right: 1%;
+  /* background-color:#036EB7; */
+}
+.l-pt-header-logo-en img,
+.l-pt-header-logo-img img {
+  width: auto;
+  height: 100%;
+}
+
+.l-pt-article {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5vw;
+  /* background-color:coral; */
+}
+.l-pt-pg-title-area {
+  width: 100%;
+  flex-direction: row;                                                      
+  display: inline-flex;
+}
+
+.l-pt-pg-title {
+  width: 86%;
+  padding: 2vw 2% 0.5vw;
+  font-weight: 400;
+  font-size: 4.2rem;
+  line-height: 1;
+  letter-spacing: 0.3rem;
+}
+@media (min-width: 1280px) {
+  .l-pt-pg-title {
+    padding: 26px 2% 6px;
+  }
+}
+@media (max-width: 600px) {
+  .l-pt-pg-title {
+    width: 81%;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+.l-pt-pg-version {
+  padding: 1.5vw 0 1vw;
+  font-weight: 100;
+  font-size: 2.2rem;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+}
+@media (min-width: 1280px) {
+  .l-pt-pg-version {
+    padding: 19px 0 9px;
+  }
+}
+.l-pt-pg-version:before {
+  content: "Ver.";
+  font-size: 1.5rem;
+}
+
+.l-pt-ichigojamweb {
+  width: 14%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+.l-pt-ichigojamweb-qr {
+  padding: 0 10%;
+}
+.l-pt-ichigojamweb-qr-caption {
+  text-align: center;
+  font-size: 1.3rem;
+}
+@media (max-width: 600px) {
+  .l-pt-ichigojamweb-qr-caption {
+    font-size: 1.0rem;
+  }
+}
+.l-pt-main {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2vw;
+
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  justify-content: end;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+
+  /* background-color:darkturquoise; */
+}
+@media (min-width: 1280px) {
+  .l-pt-main {
+    margin-bottom: 26px;
+  }
+}
+@media (max-width: 600px) {
+  .l-pt-main {
+    align-items:center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+  }
+}
+
+.l-pt-main-contents {
+  width: 60%;
+  padding: 1.5vw 2%;
+}
+@media (min-width: 1280px) {
+  .l-pt-main-contents {
+    padding: 19px 2%;
+  }
+}
+@media (max-width: 600px) {
+  .l-pt-main-contents {
+    width: 90%;
+  }
+}
+
+.l-pt-main-capture {
+  width: 40%;
+  padding: 3vw 2%;
+}
+@media (min-width: 1280px) {
+  .l-pt-main-capture {
+    padding: 39px 2%;
+  }
+}
+@media (max-width: 600px) {
+  .l-pt-main-capture {
+    width: 90%;
+  }
+}
+.l-pt-main-source {
+  font-size: 1.2rem;
+  /* background-color: #000; */
+  padding: 0.5vw 3%;
+  margin-top:0.5vw;
+  border-left: 4px solid #999;
+}
+.l-pt-main-source a {
+  color: #000;
+  text-decoration: none;
+}
+
+.l-pt-main-description {
+  width: 100%;
+  margin-bottom: 1.2vw;
+  font-size: 2.0rem;
+  line-height: 1.5;
+}
+@media (min-width: 1280px) {
+  .l-pt-main-description {
+    margin-bottom: 18px;
+  }
+}
+
+.l-pt-main-code {
+  width: 100%;
+  font-family: 'ichigojam';
+  font-size: 1.8rem;
+  line-height: 2.3;
+  color: #ffffff;
+  background-color: #000000;
+  /* white-space: pre-wrap; */
+  word-break: break-all;
+  padding: 1vw 0;
+  margin: 0.5vw 0;
+
+  flex-direction: column;                                                      
+  display: inline-flex; 
+}
+@media (min-width: 1280px) {
+  .l-pt-main-code {
+    padding: 13px 0;
+    margin: 6px 0;
+    }
+}
+
+.l-pt-main-code input {
+  display: none;
+  padding: 1.5vw;
+}
+@media (min-width: 1280px) {
+  .l-pt-main-code input {
+    padding: 19px;
+  }
+}
+
+.l-pt-main-code input[type="radio"] + label {
+  padding-left: 5%;
+}
+
+.l-pt-main-code input[type="radio"]:checked + label {
+  color: #3275bc;
+  /* border: 2px solid #3275bc; */
+  background-color: #d0e6fd;
+}
+
+.l-pt-custom {
+  width: 96%;
+  margin: 0 2%;
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+  /* background-color: bisque; */
+}
+
+.l-pt-custom-item {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1vw;
+
+  /* background-color: blueviolet; */
+}
+@media (min-width: 1280px) {
+  .l-pt-custom-item {
+    margin-bottom: 13px;
+  }
+}
+
+.l-pt-custom-item-task {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  height: 7vw;
+  padding:2.5vw 2%;
+
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+
+  background-color:#EFEFEF;
+}
+@media (min-width: 1280px) {
+  .l-pt-custom-item-task {
+    height:55px;
+    padding:13px 2%;
+  }
+}
+@media (max-width: 600px) {
+  .l-pt-custom-item-task {
+    height:  10vw;
+    padding:3.2vw 4%;
+  }
+}
+
+.l-pt-custom-item-task:before {
+  counter-increment: taskno;
+  content: counter(taskno) ". ";
+  font-size: 2.8rem;
+}
+
+.l-pt-custom-item-task:after {
+  top: 50%;
+  right: 2%;
+  width: 1.6vw;
+  height: 1.6vw;
+  margin-top: -.8vw;
+  content: "";
+  position: absolute;
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+@media (min-width: 1280px) {
+  .l-pt-custom-item-task:after {
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+  }
+}
+
+.l-pt-custom-item.open .l-pt-custom-item-task:after {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.l-pt-custom-item-solution {
+  padding:2.5vw 4%;
+  display: none;
+}
+
+.l-pt-footer {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1vw 0;
+
+  background-color:#eee;  
+}
+@media (min-width: 1280px) {
+  .l-pt-footer {
+    padding: 13px 0;
+  }
+}
+
+.l-pt-footer-copyright {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.2rem;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+}
