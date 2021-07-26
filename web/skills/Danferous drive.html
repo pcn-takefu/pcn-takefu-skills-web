@@ -47,7 +47,7 @@
             <div class="l-pt-wrap">
                 <div class="l-pt-pg-title-area">
                     <div class="l-pt-pg-title">
-                        <h1><ruby><rb>Dangerous　</rb><rt>でんじゃらす</rt></ruby><ruby><rb>drive </rb><rt>どらいぶ</rt></ruby></h1>
+                        <h1><ruby><rb>Dangerous</rb><rt>でんじゃらす</rt></ruby> <ruby><rb>drive </rb><rt>どらいぶ</rt></ruby></h1>
                     </div>
                     <div class="l-pt-ichigojamweb">
                         <a href="https://fukuno.jig.jp/app/IchigoJam/" target="_blank" rel="noopener noreferrer">
@@ -63,7 +63,7 @@
                 <div class="l-pt-main">
                     <div class="l-pt-main-capture effect-fade">
                         <div class="l-pt-main-image">
-                            <img src="../assets/img/capture/kawakudari.png" width="1076" height="882" alt="かわくだりゲーム">
+                            <img src="../assets/img/capture/Dangerous drive.png" width="1076" height="882" alt="かわくだりゲーム">
                         </div>
                         <div class="l-pt-main-source">
                             <a href="https://fukuno.jig.jp/img2/iotclass-handsout.pdf" target="_blank" rel="noopener noreferrer">
@@ -101,51 +101,48 @@
                                 <label for="60">8 FOR A=1 TO 11</label>
                                 <input type="radio" id="70" name="code" value="70" class="">
                                 <label for="70">9 WAIT3:CLS:LC0,A:?"Dangerous drive":NEXT</label>
-                                <input type="radio" id="80" name="code" value="70" class="">
+                                <input type="radio" id="80" name="code" value="80" class="">
                                 <label for="90">10 VIDEO6:CLS:CLV:T=3:H=PEEK(#FFF)*256+PEEK(#FFE)</label>
-                                <input type="radio" id="90" name="code" value="70" class="">
-                                <label for="100">20 LC 3,3:?T:IF T>0 WAIT60:T=T-1:GOTO12 ELSE CLS</label>
-                                <input type="radio" id="100" name="code" value="70" class="">
+                                <input type="radio" id="90" name="code" value="90" class="">
+                                <label for="100">20 LC 3,3:?T:IF T>0 WAIT60:T=T-1:GOTO20 ELSE CLS</label>
+                                <input type="radio" id="100" name="code" value="100" class="">
                                 <label for="110">30 IF F=0 LC 0,0:?"- - - - ":LC0,3:?"- - - - "</label>
-                                <input type="radio" id="110" name="code" value="70" class="">
+                                <input type="radio" id="110" name="code" value="110" class="">
                                 <label for="120">40 O=O+1</label>
-                                <input type="radio" id="120" name="code" value="70" class="">
+                                <input type="radio" id="120" name="code" value="120" class="">
                                 <label for="130">50 A=1:W=8:R=1:P=0</label>
-                                <input type="radio" id="130" name="code" value="70" class="">
+                                <input type="radio" id="130" name="code" value="130" class="">
                                 <label for="140">60 O=RND(2)</label>
-                                <input type="radio" id="140" name="code" value="70" class="">
+                                <input type="radio" id="140" name="code" value="140" class="">
                                 <label for="150">70 IF F=0 LC 0,0:?"- - - - ":LC0,3:?"- - - - "</label>
-                                <input type="radio" id="150" name="code" value="70" class="">
+                                <input type="radio" id="150" name="code" value="150" class="">
                                 <label for="160">72 IF F=1 LC 0,0:?" - - - -":LC0,3:?" - - - -"</label>
-                                <input type="radio" id="160" name="code" value="70" class="">
+                                <input type="radio" id="160" name="code" value="160" class="">
                                 <label for="170">74 LC 0,7:?P;" HI";H;</label>
-                                <input type="radio" id="170" name="code" value="70" class="">
+                                <input type="radio" id="170" name="code" value="170" class="">
                                 <label for="180">76 IF BTN(SPACE) OR BTN() A=2 ELSE A=1</label>
-                                <input type="radio" id="180" name="code" value="70" class="">
+                                <input type="radio" id="180" name="code" value="180" class="">
                                 <label for="190">78 IF F=0 LC 0,A:?CHR$(225) ELSE LC 0,A:?CHR$(226)</label>
-                                <input type="radio" id="190" name="code" value="70" class="">
+                                <input type="radio" id="190" name="code" value="190" class="">
                                 <label for="200">80 IF O=0 Y=2</label>
-                                <input type="radio" id="200" name="code" value="70" class="">
+                                <input type="radio" id="200" name="code" value="200" class="">
                                 <label for="210">90 IF O=1 Y=1</label>
-                                <input type="radio" id="210" name="code" value="70" class="">
+                                <input type="radio" id="210" name="code" value="210" class="">
                                 <label for="220">100 IF SCR(5,1)=0 && SCR(5,2)=0 && SCR(6,1)=0 && SCR(6,2)=0 LC 7,Y:?CHR$(224):P=P+1:Z=Z+1:IF H&lt;P H=P</label>
-                                <input type="radio" id="220" name="code" value="70" class="">
+                                <input type="radio" id="220" name="code" value="220" class="">
                                 <label for="230">110 IF Z=10 Z=0:R=R+1:W=W-1</label>
-                                <input type="radio" id="230" name="code" value="70" class="">
-                                <label for="240">120 IF SCR(1,A)=224 GOTO120</label>
-                                <input type="radio" id="240" name="code" value="70" class="">
+                                <input type="radio" id="230" name="code" value="230" class="">
+                                <label for="240">120 IF SCR(1,A)=224 GOTO150</label>
+                                <input type="radio" id="240" name="code" value="240" class="">
                                 <label for="250">130 IF F=0 F=1 ELSE F=0</label>
-                                <input type="radio" id="250" name="code" value="70" class="">
-                                <label for="260">140 WAIT W:SCROLL3:GOTO70</label>
-                                <input type="radio" id="260" name="code" value="70" class="">
+                                <input type="radio" id="250" name="code" value="250" class="">
+                                <label for="260">140 WAIT W:SCROLL3:GOTO60</label>
+                                <input type="radio" id="260" name="code" value="260" class="">
                                 <label for="270">150 LC 0,A:?CHR$(244):LC0,7:?P;" HI";H;:LC0,3:?"GAMEOVER";:WAIT120:VIDEO1:?P;"ポイント  レベル";R;"  ハイスコア";H</label>
-                                <input type="radio" id="270" name="code" value="70" class="">
+                                <input type="radio" id="270" name="code" value="270" class="">
                                 <label for="280">160 POKE#FFE,H&255,H/256</label>
-                                <input type="radio" id="280" name="code" value="70" class="">
+                                <input type="radio" id="280" name="code" value="280" class="">
                                 <label for="290">170 SAVE0</label>
-                                <code style="display: none;"></code>
-                                    
-                            </code>
                         </div>
                     </div>
                 </div>
@@ -157,60 +154,34 @@
                         </div>
                         <div class="l-pt-custom-item-solution">
                             <p>
-                                <code class="ichigojam">40 WAIT 3</code>　の3を<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう
+                                <code class="ichigojam">50 W=8</code>　の8を<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう
                             </p>
                         </div>
                     </div>
                     <div class="l-pt-custom-item">
                         <div class="l-pt-custom-item-task">
-                            <ruby><rb>自分</rb><rt>じぶん</rt></ruby>や<ruby><rb>敵</rb><rt>てき</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>をかえてみよう
+                            <ruby><rb>敵</rb><rt>てき</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>をかえてみよう
                         </div>
                         <div class="l-pt-custom-item-solution">
-                            <p><ruby><rb>自分</rb><rt>じぶん</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>は <code class="ichigojam">20</code> の <code class="ichigojam">"0"</code> をかえてみよう！！</p>
-                            <p><ruby><rb>敵</rb><rt>てき</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>は <code class="ichigojam">30</code> の <code class="ichigojam">"*"</code> をかえてみよう！！</p>
+                            <p><ruby><rb>敵</rb><rt>てき</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>は <code class="ichigojam">100</code> の <code class="ichigojam">CHR$(224)</code> をかえてみよう！！</p>
                         </div>
                     </div>
                     <div class="l-pt-custom-item">
                         <div class="l-pt-custom-item-task">
-                            <ruby><rb>得点</rb><rt>とくてん</rt></ruby>を<ruby><rb>表示</rb><rt>ひょうじ</rt></ruby>してみよう
+                            <ruby><rb>ハイスコア</rb><rt>はいすこあ</rt></ruby>を<ruby><rb>表示</rb><rt>ひょうじ</rt></ruby>してみよう
                         </div>
                         <div class="l-pt-custom-item-solution">
-                            <p>
-                                <code class="ichigojam">10 CLT:CLS:X=15</code>　のように、 <code class="ichigojam">CLT</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>してみよう<br>
-                                <code class="ichigojam">60 IF SCR(X,5) ?TICK():END</code>　のように、<br>
-                                <code class="ichigojam">?TICK():</code> を<ruby><rb>追加</rb><rt>ついか</rt>してみよう
-                            </p>
+                            <p><code class="ichigojam">170 SAVE0</code>　の、 <code class="ichigojam">0</code> を、このプログラムの<ruby><rb>保存先</rb><rt>ほぞんさき</rt></ruby>の<ruby><rb>番号</rb><rt>ばんごう</rt></ruby>にしてみよう<br></p>
                         </div>
                     </div>
                     <div class="l-pt-custom-item">
                         <div class="l-pt-custom-item-task">
-                            <ruby><rb>敵キャラ</rb><rt>てききゃら</rt></ruby>を<ruby><rb>増</rb><rt>ふ</rt></ruby>やしてみよう
+                             &lt;<ruby><rb>上級者向</rb><rt>じょうきゅうしゃむ</rt></ruby>け&gt; <ruby><rb>自分</rb><rt>じぶん</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>を<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう
                         </div>
                         <div class="l-pt-custom-item-solution">
                             <p>
-                                <ruby><rb>ヒント</rb><rt>ひんと</rt></ruby>は <code class="ichigojam">30</code> ． <code class="ichigojam">"*"</code> を<ruby><rb>増</rb><rt>ふ</rt></ruby>やしてみると...<br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="l-pt-custom-item">
-                        <div class="l-pt-custom-item-task">
-                            <ruby><rb>無敵ゾーン</rb><rt>むてきぞーん</rt></ruby>をなくしてみよう
-                        </div>
-                        <div class="l-pt-custom-item-solution">
-                            <p>
-                                <code class="ichigojam">65 X=(X+32)%32</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>するか、<br>
-                                <code class="ichigojam">65 IF X<0 OR X>32 END</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>してみよう<br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="l-pt-custom-item">
-                        <div class="l-pt-custom-item-task">
-                            <ruby><rb>今</rb><rt>いま</rt></ruby>の<ruby><rb>得点</rb><rt>とくてん</rt></ruby>を<ruby><rb>表示</rb><rt>ひょうじ</rt></ruby>してみよう
-                        </div>
-                        <div class="l-pt-custom-item-solution">
-                            <p>
-                                <code class="ichigojam">10 CLT:CLS:X=15</code>　のように、 <code class="ichigojam">CLT</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>し、<br>
-                                <code class="ichigojam">35 LC0,0:?"SCORE:";TICK()</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>してみよう
+                                <code class="ichigojam">6 POKE 225*8,0,120,132,131,129,239,187,238</code> と<br>
+                                <code class="ichigojam">7 POKE 226*8,0,120,132,131,129,197,187,68</code> の<ruby><rb>キャラクターコード</rb><rt>きゃらくたーこーど</rt></ruby>を<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう<br>
                             </p>
                         </div>
                     </div>
