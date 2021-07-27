@@ -66,9 +66,9 @@
                             <img src="../assets/img/capture/Dangerous drive.png" width="1076" height="882" alt="かわくだりゲーム">
                         </div>
                         <div class="l-pt-main-source">
-                            <a href="https://fukuno.jig.jp/img2/iotclass-handsout.pdf" target="_blank" rel="noopener noreferrer">
-                                <p>IchigoJamはじめのいっぽ</p>
-                                <p>https://fukuno.jig.jp/img2/iotclass-handsout.pdf</p>
+                            <a href="https://youtu.be/iz2LGxlunmU" target="_blank" rel="noopener noreferrer">
+                                <p>Dangerous drive　YouTube</p>
+                                <p>https://youtu.be/iz2LGxlunmU</p>
                             </a>
                         </div>
                     </div>
@@ -102,47 +102,47 @@
                                 <input type="radio" id="70" name="code" value="70" class="">
                                 <label for="70">9 WAIT3:CLS:LC0,A:?"Dangerous drive":NEXT</label>
                                 <input type="radio" id="80" name="code" value="80" class="">
-                                <label for="90">10 VIDEO6:CLS:CLV:T=3:H=PEEK(#FFF)*256+PEEK(#FFE)</label>
+                                <label for="80">10 VIDEO6:CLS:CLV:T=3:H=PEEK(#FFF)*256+PEEK(#FFE)</label>
                                 <input type="radio" id="90" name="code" value="90" class="">
-                                <label for="100">20 LC 3,3:?T:IF T>0 WAIT60:T=T-1:GOTO20 ELSE CLS</label>
+                                <label for="90">20 LC 3,3:?T:IF T>0 WAIT60:T=T-1:GOTO20 ELSE CLS</label>
                                 <input type="radio" id="100" name="code" value="100" class="">
-                                <label for="110">30 IF F=0 LC 0,0:?"- - - - ":LC0,3:?"- - - - "</label>
+                                <label for="100">30 IF F=0 LC 0,0:?"- - - - ":LC0,3:?"- - - - "</label>
                                 <input type="radio" id="110" name="code" value="110" class="">
-                                <label for="120">40 O=O+1</label>
+                                <label for="110">40 O=O+1</label>
                                 <input type="radio" id="120" name="code" value="120" class="">
-                                <label for="130">50 A=1:W=8:R=1:P=0</label>
+                                <label for="120">50 A=1:W=8:R=1:P=0</label>
                                 <input type="radio" id="130" name="code" value="130" class="">
-                                <label for="140">60 O=RND(2)</label>
+                                <label for="130">60 O=RND(2)</label>
                                 <input type="radio" id="140" name="code" value="140" class="">
-                                <label for="150">70 IF F=0 LC 0,0:?"- - - - ":LC0,3:?"- - - - "</label>
+                                <label for="140">70 IF F=0 LC 0,0:?"- - - - ":LC0,3:?"- - - - "</label>
                                 <input type="radio" id="150" name="code" value="150" class="">
-                                <label for="160">72 IF F=1 LC 0,0:?" - - - -":LC0,3:?" - - - -"</label>
+                                <label for="150">72 IF F=1 LC 0,0:?" - - - -":LC0,3:?" - - - -"</label>
                                 <input type="radio" id="160" name="code" value="160" class="">
-                                <label for="170">74 LC 0,7:?P;" HI";H;</label>
+                                <label for="160">74 LC 0,7:?P;" HI";H;</label>
                                 <input type="radio" id="170" name="code" value="170" class="">
-                                <label for="180">76 IF BTN(SPACE) OR BTN() A=2 ELSE A=1</label>
+                                <label for="170">76 IF BTN(SPACE) OR BTN() A=2 ELSE A=1</label>
                                 <input type="radio" id="180" name="code" value="180" class="">
-                                <label for="190">78 IF F=0 LC 0,A:?CHR$(225) ELSE LC 0,A:?CHR$(226)</label>
+                                <label for="180">78 IF F=0 LC 0,A:?CHR$(225) ELSE LC 0,A:?CHR$(226)</label>
                                 <input type="radio" id="190" name="code" value="190" class="">
-                                <label for="200">80 IF O=0 Y=2</label>
+                                <label for="190">80 IF O=0 Y=2</label>
                                 <input type="radio" id="200" name="code" value="200" class="">
-                                <label for="210">90 IF O=1 Y=1</label>
+                                <label for="200">90 IF O=1 Y=1</label>
                                 <input type="radio" id="210" name="code" value="210" class="">
-                                <label for="220">100 IF SCR(5,1)=0 && SCR(5,2)=0 && SCR(6,1)=0 && SCR(6,2)=0 LC 7,Y:?CHR$(224):P=P+1:Z=Z+1:IF H&lt;P H=P</label>
+                                <label for="210">100 IF SCR(5,1)=0 && SCR(5,2)=0 && SCR(6,1)=0 && SCR(6,2)=0 LC 7,Y:?CHR$(224):P=P+1:Z=Z+1:IF H&lt;P H=P</label>
                                 <input type="radio" id="220" name="code" value="220" class="">
-                                <label for="230">110 IF Z=10 Z=0:R=R+1:W=W-1</label>
+                                <label for="220">110 IF Z=10 Z=0:R=R+1:W=W-1</label>
                                 <input type="radio" id="230" name="code" value="230" class="">
-                                <label for="240">120 IF SCR(1,A)=224 GOTO150</label>
+                                <label for="230">120 IF SCR(1,A)=224 GOTO150</label>
                                 <input type="radio" id="240" name="code" value="240" class="">
-                                <label for="250">130 IF F=0 F=1 ELSE F=0</label>
+                                <label for="240">130 IF F=0 F=1 ELSE F=0</label>
                                 <input type="radio" id="250" name="code" value="250" class="">
-                                <label for="260">140 WAIT W:SCROLL3:GOTO60</label>
+                                <label for="250">140 WAIT W:SCROLL3:GOTO60</label>
                                 <input type="radio" id="260" name="code" value="260" class="">
-                                <label for="270">150 LC 0,A:?CHR$(244):LC0,7:?P;" HI";H;:LC0,3:?"GAMEOVER";:WAIT120:VIDEO1:?P;"ポイント  レベル";R;"  ハイスコア";H</label>
+                                <label for="260">150 LC 0,A:?CHR$(244):LC0,7:?P;" HI";H;:LC0,3:?"GAMEOVER";:WAIT120:VIDEO1:?P;"ポイント  レベル";R;"  ハイスコア";H</label>
                                 <input type="radio" id="270" name="code" value="270" class="">
-                                <label for="280">160 POKE#FFE,H&255,H/256</label>
+                                <label for="270">160 POKE#FFE,H&255,H/256</label>
                                 <input type="radio" id="280" name="code" value="280" class="">
-                                <label for="290">170 SAVE0</label>
+                                <label for="280">170 SAVE0</label>
                         </div>
                     </div>
                 </div>
