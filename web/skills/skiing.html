@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>スキーゲーム｜IchigoJam Skills｜PCN武生</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="IchigoJam BASIC で動くスキーのゲームです。">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pcntakefu.club/skills/skiing.html">
+    <meta property="og:image" content="./assets/img/ogp/index.png">
+    
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon-180x180.png" />
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="l-pt-wrapper">
+        <header class="l-pt-header" data-current="first-view">
+            <div class="l-pt-header-wrap">
+                <div class="l-pt-header-menu">
+                </div>
+                <div class="l-pt-header-logo">
+                    <div class="l-pt-header-logo-en">
+                        <img src="../assets/img/logo_en.png" width="309" height="79" alt="PCN TAKEFU">
+                    </div>
+                    <div class="l-pt-header-logo-img">
+                        <img src="../assets/img/logo_temple.png" width="39" height="39" alt="PCN TAKEFU お寺">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article class="l-pt-article">
+            <div class="l-pt-wrap">
+                <div class="l-pt-pg-title-area">
+                    <div class="l-pt-pg-title">
+                        <h1><ruby><rb>スキーゲーム</rb><rt>すきーげーむ</rt></h1>
+                        <p class="l-pt-pg-version">1.1</p>
+                    </div>
+                    <div class="l-pt-ichigojamweb">
+                        <a href="https://fukuno.jig.jp/app/IchigoJam/" target="_blank" rel="noopener noreferrer">
+                            <div class="l-pt-ichigojamweb-qr">
+                                <img src="../assets/img/ichigojamweb-qr.png" width="222" height="222" alt="IchigoJam Web">
+                            </div>
+                            <div class="l-pt-ichigojamweb-qr-caption">
+                                <p>IchigoJam Web</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="l-pt-main">
+                    <div class="l-pt-main-capture effect-fade">
+                        <div class="l-pt-main-image">
+                            <img src="../assets/img/capture/skiing.png" width="1076" height="882" alt="スキーゲーム">
+                        </div>
+                        <div class="l-pt-main-source">
+                            <a href="https://www.umic.jp/custom/img/shokubataiken/ski-text.pdf" target="_blank" rel="noopener noreferrer">
+                                <p>IchigoJam でスキーゲームを作る - 上田市マルチメディア情報センター</p>
+                                <p>https://www.umic.jp/custom/img/shokubataiken/ski-text.pdf</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="l-pt-main-contents effect-fade">
+                        <div class="l-pt-main-description">
+                            <ruby>
+                                <p>
+                                    <ruby><rb>プレイヤー</rb><rt>ぷれいやー</rt>をそうさして<ruby><rb>ポール</rb><rt>ぽーる</rt></ruby>の<ruby><rb>間</rb><rt>あいだ</rt></ruby>をくぐる<ruby><rb>ゲーム</rb><rt>げーむ</rt></ruby>
+                                </p>
+                            </ruby>
+                            <p>
+                                <ruby><rb>左右</rb><rt>さゆう</rt></ruby>の<ruby><rb>矢印キー</rb><rt>やじるしきー</rt></ruby>すべる<ruby><rb>方向</rb><rt>ほうこう</rt></ruby>を<ruby><rb>変</rb><rt>か</rt></ruby>えよう！
+                            </p>
+                        </div>
+                        <div class="l-pt-main-code">
+                            <!-- <code class="language-ichigojam"> -->
+                                <input type="radio" id="10" name="code" value="10" class="">
+                                <label for="10">10 '*SKI Game*</label>
+                                <input type="radio" id="20" name="code" value="20" class="">
+                                <label for="20">20 CLS:CLV</label>
+                                <input type="radio" id="30" name="code" value="30" class="">
+                                <label for="30">30 LOCATE 0,0</label>
+                                <input type="radio" id="40" name="code" value="40" class="">
+                                <label for="40">40 PRINT S</label>
+                                <input type="radio" id="50" name="code" value="50" class="">
+                                <label for="50">50 X=15 :Y=3</label>
+                                <input type="radio" id="60" name="code" value="60" class="">
+                                <label for="60">60 LOCATE X,Y</label>
+                                <input type="radio" id="70" name="code" value="70" class="">
+                                <label for="70">70 PRINT CHR$(5)</label>
+                                <input type="radio" id="80" name="code" value="70" class="">
+                                <label for="80">75 P=12</label>
+                                <input type="radio" id="90" name="code" value="70" class="">
+                                <label for="90">77 W=5</label>
+                                <input type="radio" id="100" name="code" value="70" class="">
+                                <label for="100">80 '--- GAMELOOP ---</label>
+                                <input type="radio" id="110" name="code" value="70" class="">
+                                <label for="110">90 LOCATE X,Y</label>
+                                <input type="radio" id="120" name="code" value="70" class="">
+                                <label for="120">100 PRINT “ “</label>
+                                <input type="radio" id="130" name="code" value="70" class="">
+                                <label for="130">110 IF BTN(LEFT)=1 AND X>0 THEN X=X-1</label>
+                                <input type="radio" id="140" name="code" value="70" class="">
+                                <label for="140">120 IF BTN(RIGHT)=1 AND X&lt;31 THEN X=X+1</label>
+                                <input type="radio" id="150" name="code" value="70" class="">
+                                <label for="150">125 GOSUB 200</label>
+                                <input type="radio" id="160" name="code" value="70" class="">
+                                <label for="160">127 D=SCR(X,Y)</label>
+                                <input type="radio" id="170" name="code" value="70" class="">
+                                <label for="170">130 LOCATE X,Y</label>
+                                <input type="radio" id="180" name="code" value="70" class="">
+                                <label for="180">140 PRINT CHR$(5)</label>
+                                <input type="radio" id="190" name="code" value="70" class="">
+                                <label for="190">141 IF D=95 THEN BEEP:S=S+1</label>
+                                <input type="radio" id="200" name="code" value="70" class="">
+                                <label for="200">142 LOCATE 0,0</label>
+                                <input type="radio" id="210" name="code" value="70" class="">
+                                <label for="210">144 PRINT S</label>
+                                <input type="radio" id="220" name="code" value="70" class="">
+                                <label for="220">146 IF D=124 THEN GOTO 160</label>
+                                <input type="radio" id="230" name="code" value="70" class="">
+                                <label for="230">147 W=5 -S/10</label>
+                                <input type="radio" id="240" name="code" value="70" class="">
+                                <label for="240">148 IF W&lt;1 THEN W=149:WAIT 5</label>
+                                <input type="radio" id="250" name="code" value="70" class="">
+                                <label for="250">150 GOTO 80</label>
+                                <input type="radio" id="260" name="code" value="70" class="">
+                                <label for="260">160 '--- GAMEOVER ---</label>
+                                <input type="radio" id="270" name="code" value="70" class="">
+                                <label for="270">170 LOCATE X,Y</label>
+                                <input type="radio" id="280" name="code" value="70" class="">
+                                <label for="280">180 PRINT "X"</label>
+                                <input type="radio" id="290" name="code" value="70" class="">
+                                <label for="290">190 BEEP 30,30</label>
+                                <input type="radio" id="300" name="code" value="70" class="">
+                                <label for="300">195 END</label>
+                                <input type="radio" id="310" name="code" value="70" class="">
+                                <label for="310">200 '--- POLE ---</label>
+                                <input type="radio" id="320" name="code" value="70" class="">
+                                <label for="320">210 C=C+1</label>
+                                <input type="radio" id="330" name="code" value="70" class="">
+                                <label for="330">220 IF C&lt;10 THEN LOCATE 0,23:PRINT:RETURN</label>
+                                <input type="radio" id="340" name="code" value="70" class="">
+                                <label for="340">230 P=P+RND(3)-1</label>
+                                <input type="radio" id="350" name="code" value="70" class="">
+                                <label for="350">240 IF P&lt;0 THEN P=0</label>
+                                <input type="radio" id="360" name="code" value="70" class="">
+                                <label for="360">250 IF P+W>28 THEN P=28-W</label>
+                                <input type="radio" id="370" name="code" value="70" class="">
+                                <label for="370">260 LOCATE P,23</label>
+                                <input type="radio" id="380" name="code" value="70" class="">
+                                <label for="380">270 PRINT "|";</label>
+                                <input type="radio" id="390" name="code" value="70" class="">
+                                <label for="390">272 FOR I=1 TO W</label>
+                                <input type="radio" id="400" name="code" value="70" class="">
+                                <label for="400">274 PRINT "_";</label>
+                                <input type="radio" id="410" name="code" value="70" class="">
+                                <label for="410">276 NEXT</label>
+                                <input type="radio" id="420" name="code" value="70" class="">
+                                <label for="420">278 PRINT "|"</label>
+                                <input type="radio" id="430" name="code" value="70" class="">
+                                <label for="430">280 C=0</label>
+                                <input type="radio" id="440" name="code" value="70" class="">
+                                <label for="440">290 RETURN</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="l-pt-custom effect-fade">
+                    <div class="l-pt-custom-item">
+                        <div class="l-pt-custom-item-task">
+                            <ruby><rb>速</rb><rt>はや</rt></ruby>さを<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう
+                        </div>
+                        <div class="l-pt-custom-item-solution">
+                            <p>
+                                <code class="ichigojam">148</code> の <code class="ichigojam">WAIT 5</code>の5を<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう
+                            </p>
+                        </div>
+                    </div>
+                    <div class="l-pt-custom-item">
+                        <div class="l-pt-custom-item-task">
+                            <ruby><rb>自分</rb><rt>じぶん</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>をかえてみよう
+                        </div>
+                        <div class="l-pt-custom-item-solution">
+                            <p><ruby><rb>自分</rb><rt>じぶん</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>は <code class="ichigojam">70 PRINT CHR$(5)</code> と <code class="ichigojam">140 PRINT CHR$(5)</code> の <code class="ichigojam">CHR$(5)</code> をかえてみよう！！</p>
+                        </div>
+                    </div>
+                    <div class="l-pt-custom-item">
+                        <div class="l-pt-custom-item-task">
+                            <ruby><rb>速</rb><rt>はや</rt></ruby>さをだんだん<ruby><rb>速</rb><rt>はや</rt></ruby>くしてみよう
+                        </div>
+                        <div class="l-pt-custom-item-solution">
+                            <p>
+                                <code class="ichigojam">148</code> の <code class="ichigojam">WAIT 5</code> の5を <code class="ichigojam">W</code> にしてみよう
+                            </p>
+                        </div>
+                    </div>
+                    <div class="l-pt-custom-item">
+                        <div class="l-pt-custom-item-task">
+                            <ruby><rb>無敵ゾーン</rb><rt>むてきぞーん</rt></ruby>をなくしてみよう
+                        </div>
+                        <div class="l-pt-custom-item-solution">
+                            <p>
+                                <code class="ichigojam">65 X=(X+32)%32</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>するか、<br>
+                                <code class="ichigojam">65 IF X<0 OR X>32 END</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>してみよう<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+        <footer class="l-pt-footer">
+            <div class="l-pt-wrap">
+                <div class="l-pt-footer-copyright">
+                    <p>&copy;2021 PCN Takefu. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.events.touch.min.js"></script>
+<script language="javascript" type="text/javascript">
+	jQuery(document).ready(function($) {
+        $('.l-pt-custom-item-task').click(function () {
+            $(this).parent('.l-pt-custom-item').toggleClass('open');
+            $(this).siblings('.l-pt-custom-item-solution').slideToggle();            
+        });
+    });
+    // スクロールによる表示エフェクト
+    window.onload = function () {
+        scroll_effect();
+        $(window).scroll(function () {
+            scroll_effect();
+        });
+
+        function scroll_effect() {
+            $('.effect-fade, .effect-fade-left-delay, .effect-fade-right-delay, .effect-fade-right-delay2, .effect-fade-delay1, .effect-fade-delay2, .effect-fade-delay3, .effect-fade-delay4').each(function () {
+                var elemPos = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > elemPos - windowHeight) {
+                    $(this).addClass('effect-scroll');
+                }
+            });
+        }
+    };
+</script>
+
+</html>
