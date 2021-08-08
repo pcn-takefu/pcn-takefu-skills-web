@@ -634,6 +634,18 @@ index.html
   }
 }
 
+.l-pt-custom-item-task span.author {
+  font-size: 0.9rem;
+  margin-left: 4%;
+  letter-spacing: 0.1rem;
+}
+.l-pt-custom-item-task span.author::before {
+  content:"- ";
+}
+.l-pt-custom-item-task span.author::after {
+  content:" added. -"
+}
+
 .l-pt-custom-item.open .l-pt-custom-item-task:after {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
