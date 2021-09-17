@@ -83,10 +83,15 @@
                             <p>
                                 <ruby><rb>プログラム</rb><rt>ぷろぐらむ</rt></ruby>は<ruby><rb>長</rb><rt>なが</rt></ruby>いのでがんばってね
                             </p>
+                                <br>
+                            <p>
+                                <ruby><rb>キャラクターコード</rb><rt>キャラクターコード</rt></ruby>を<ruby><rb>先</rb><rt>さき</rt></ruby>に<ruby><rb>実行</rb><rt>じっこう</rt></ruby>してから、<ruby><rb>メインプログラム</rb><rt>めいんぷろぐらむ</rt></ruby>を<ruby><rb>実行</rb><rt>じっこう</rt></ruby>します。
+                            </p>
                         </div>
                         <div class="l-pt-main-code">
                             <!-- <code class="language-ichigojam"> -->
-                                <p>キャラクタコード</p>
+                                <input type="radio" id="1" name="code" value="70" class="">
+                                <label for="1">キャラクターコード</label>
                                 <input type="radio" id="5" name="code" value="5" class="">
                                 <label for="5">110 POKE #700,#10,#38,#7c,#fe,#d6,#7c,#44,#82</label>
                                 <input type="radio" id="10" name="code" value="10" class="">
@@ -112,11 +117,80 @@
                                 <input type="radio" id="110" name="code" value="70" class="">
                                 <label for="110">220 POKE #758,#18,#18,#3c,#ff,#ff,#ff,#ff,#7e</label>
                                 <input type="radio" id="120" name="code" value="70" class="">
-                                <label for="120">230 poke #760,#91,#52,#34,#1f,#f8,#2c,#4a,#89</label>
+                                <label for="120">230 POKE #760,#91,#52,#34,#1f,#f8,#2c,#4a,#89</label>
                                 <input type="radio" id="130" name="code" value="70" class="">
-                                <label for="130">240 poke #768,#00,#18,#18,#18,#18,#18,#18,#00</label>
+                                <label for="130">240 POKE #768,#00,#18,#18,#18,#18,#18,#18,#00</label>
                                 <input type="radio" id="140" name="code" value="70" class="">
-                                <label for="140">250 poke #770,#00,#10,#8,#10,#8,#10,#8,#00</label>
+                                <label for="140">250 POKE #770,#00,#10,#8,#10,#8,#10,#8,#00</label>
+                                <input type="radio" id="150" name="code" value="70" class="">
+                                <label for="150">260 POKE #778,#FF,#FF,#FF,#FF,#FF,#FF,#FF,#FF</label>
+                                <input type="radio" id="160" name="code" value="70" class="">
+                                <label for="160">270 POKE #780,#33,#33,#33,#FF,#FF,#FF,#FF,#FF</label>
+                                <input type="radio" id="170" name="code" value="70" class="">
+                                <label for="170">280 POKE #788,#11,#11,#11,#33,#33,#FF,#FF,#FF</label>
+                                <input type="radio" id="180" name="code" value="70" class="">
+                                <label for="180">290 POKE #790,#00,#00,#00,#11,#11,#33,#33,#77</label>
+                                <br>
+                                <input type="radio" id="190" name="code" value="70" class="">
+                                <label for="190">NEW</label>
+                                <br>
+                                <input type="radio" id="200" name="code" value="70" class="">
+                                <label for="200">メインプログラム</label>
+                                <br>
+                                <input type="radio" id="210" name="code" value="70" class="">
+                                <label for="210">2 L=0</label>
+                                <input type="radio" id="220" name="code" value="70" class="">
+                                <label for="220">4 CLS:A=3:B=7:C=10:D=0:E=0:F=-30</label>
+                                <input type="radio" id="230" name="code" value="70" class="">
+                                <label for="230">6 V=1:N=25:W=0:T=0:FOR I=1TO25:R=I*2:[R]=I-1:[R+1]=I+1:NEXT:[0]=0:[1]=1:G=0:H=0</label>
+                                <input type="radio" id="240" name="code" value="70" class="">
+                                <label for="240">8 P=[1]:I=1:U=V:O=0</label>
+                                <input type="radio" id="250" name="code" value="70" class="">
+                                <label for="250">10 R=P-1:X=A+(R%8)*2:Y=(R/8)*2+B:K=VPEEK(X,Y-T):LC X,Y-T:?" ":IF K=42R=P*2:[[R]*2+1]=[R+1]:[[R+1]*2]=[R]:O=O+1:GOTO24</label>
+                                <input type="radio" id="260" name="code" value="70" class="">
+                                <label for="260">12 IF V=1LC X+1,Y:?CHR$(#E0):IF X>18U=-1:W=1</label>
+                                <input type="radio" id="270" name="code" value="70" class="">
+                                <label for="270">14 IF V=-1:LC X-1,Y:?CHR$(#E1):IF X&lt;2U=1:W=1</label>
+                                <input type="radio" id="280" name="code" value="70" class="">
+                                <label for="280">16 IF G=0AND RND(4)&lt;1 G=X:H=Y+1</label>
+                                <input type="radio" id="290" name="code" value="70" class="">
+                                <label for="290">18 IF G>0LC G,H:?" ":H=H+1:LC G,H:IF VPEEK(G,H)=#EB ?"*":GOTO48</label>
+                                <input type="radio" id="300" name="code" value="70" class="">
+                                <label for="300">20 IF H>21G=0:GOTO24</label>
+                                <input type="radio" id="310" name="code" value="70" class="">
+                                <label for="310">22 IF G>0?":"</label>
+                                <input type="radio" id="320" name="code" value="70" class="">
+                                <label for="320">24 P=[P*2+1]:I=I+1:IF Y>19 GOTO48</label>
+                                <input type="radio" id="330" name="code" value="70" class="">
+                                <label for="330">26 LC C,20:?" ";CHR$(#EB);" ":K=INKEY()-28:IF K=0AND C>0:C=C-1</label>
+                                <input type="radio" id="340" name="code" value="70" class="">
+                                <label for="340">28 IF K=1AND C&lt;19:C=C+1</label>
+                                <input type="radio" id="350" name="code" value="70" class="">
+                                <label for="350">30 IF K=4AND D=0D=C+1:E=19:BEEP</label>
+                                <input type="radio" id="360" name="code" value="70" class="">
+                                <label for="360">32 LC D,E:?" ":E=E-1:K=VPEEK(D,E):LC D,E:IF D=0OR K&lt;#E0GOTO35</label>
+                                <input type="radio" id="370" name="code" value="70" class="">
+                                <label for="370">33 D=0:?"*":L=L+(K-#DF)*10:LC 22,10:?"SCORE";L:BEEP99:IF K=232 F=-30</label>
+                                <input type="radio" id="380" name="code" value="70" class="">
+                                <label for="380">34 GOTO38</label>
+                                <input type="radio" id="390" name="code" value="70" class="">
+                                <label for="390">35 IF D>0 AND E>2?"!"</label>
+                                <input type="radio" id="400" name="code" value="70" class="">
+                                <label for="400">30 IF K=4 AND D=0D=C+1:E=19:BEEP</label>
+                                <input type="radio" id="410" name="code" value="70" class="">
+                                <label for="410">36 IF E&lt;2 D=0</label>
+                                <input type="radio" id="420" name="code" value="70" class="">
+                                <label for="420">38 IF F&lt;0 F=F+1:IF F=0 F=24</label>
+                                <input type="radio" id="430" name="code" value="70" class="">
+                                <label for="430">40 IF F>0LC F,4:?CHR$(232);" ":F=F-1:IF F&lt;2 LC F,4:?" ":F=-30</label>
+                                <input type="radio" id="440" name="code" value="70" class="">
+                                <label for="440">42 IF I&lt; N GOTO10</label>
+                                <input type="radio" id="450" name="code" value="70" class="">
+                                <label for="450">44 B=B+W:T=W:W=0:N=N-O:A=A+V:V=U:IF N>1:GOTO8</label>
+                                <input type="radio" id="460" name="code" value="70" class="">
+                                <label for="460">46 GOTO4</label>
+                                <input type="radio" id="470" name="code" value="70" class="">
+                                <label for="470">48 LC2,22:?"GAMEOVER":BEEP90,50</label>
                         </div>
                     </div>
                 </div>
