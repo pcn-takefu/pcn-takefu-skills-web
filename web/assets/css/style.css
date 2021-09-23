@@ -48,7 +48,7 @@ html {
 body {
   line-height: 1;
   overflow-x: hidden;
-  counter-reset: taskno;
+  counter-reset: taskno taskno2;
 }
 
 ol, ul {
@@ -270,7 +270,7 @@ EFFECT
   bottom:20px;
   right:20px;
   display:block;
-  background-color:#8D7A6D;
+  background-color:#565656;
   color:#fff;
   text-decoration:none;
   font-weight:bold;
@@ -369,13 +369,56 @@ index.html
 .l-pt-article {
   width: 100%;
   height: auto;
-  padding-bottom: 5vw;
-  /* background-color:coral; */
+  padding-bottom: 20vw;
 }
+
 .l-pt-pg-title-area {
   width: 100%;
   flex-direction: row;                                                      
   display: inline-flex;
+}
+
+.l-pt-pg-menu-area {
+  width: 96%;
+  margin: 3vw auto 5vw;
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 1;
+  letter-spacing: 0.3rem;
+}
+@media (min-width: 1280px) {
+  .l-pt-pg-menu-area {
+    padding: 26px 2% 6px;
+  }
+}
+@media (max-width: 600px) {
+  .l-pt-pg-menu-area {
+    width: 86%;
+  }
+}
+
+.l-pt-pg-menu-area ul {
+  list-style-type: none;
+}
+.l-pt-pg-menu-area ul li {
+  margin: 0.9vw auto;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	/* background-color: #336699; */
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+}
+.l-pt-pg-menu-area ul li a {
+	color: #000;
+	display: block;
+	width: 100%;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	text-decoration: none;
+}
+.l-pt-pg-menu-area ul li a:hover {
+  opacity: 0.5;
 }
 
 .l-pt-pg-title {
@@ -399,7 +442,8 @@ index.html
   }
 }
 
-.l-pt-pg-version {
+.l-pt-pg-version,
+.l-pt-pg-date {
   padding: 1.5vw 0 1vw;
   font-weight: 100;
   font-size: 2.2rem;
@@ -407,12 +451,17 @@ index.html
   letter-spacing: 0.2rem;
 }
 @media (min-width: 1280px) {
-  .l-pt-pg-version {
+  .l-pt-pg-version,
+  .l-pt-pg-date {
     padding: 19px 0 9px;
   }
 }
 .l-pt-pg-version:before {
   content: "Ver.";
+  font-size: 1.5rem;
+}
+.l-pt-pg-date:before {
+  content: "";
   font-size: 1.5rem;
 }
 
@@ -436,7 +485,8 @@ index.html
 .l-pt-main {
   width: 100%;
   height: auto;
-  margin-bottom: 2vw;
+  padding-top: 1.5vw;
+  margin-bottom: 5vw;
 
   display: flex;
   flex-direction: row-reverse;
@@ -445,8 +495,6 @@ index.html
   justify-content: end;
   -webkit-box-pack: end;
   -moz-box-pack: end;
-
-  /* background-color:darkturquoise; */
 }
 @media (min-width: 1280px) {
   .l-pt-main {
@@ -477,6 +525,21 @@ index.html
   }
 }
 
+.l-pt-main-title {
+  width: 96%;
+  margin: 1vw auto;
+  /* padding: 3vw 2%; */
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 1;
+  letter-spacing: 0.3rem;
+}
+@media (max-width: 600px) {
+  .l-pt-main-title {
+    width: 86%;
+  }
+}
+
 .l-pt-main-capture {
   width: 40%;
   padding: 3vw 2%;
@@ -497,12 +560,21 @@ index.html
   padding: 0.5vw 3%;
   margin-top:0.5vw;
   border-left: 4px solid #999;
+  line-height: 1.2;
 }
 .l-pt-main-source a {
   color: #000;
   text-decoration: none;
 }
-
+.l-pt-main-source .annotation {
+  font-size: 1.2rem;
+}
+.l-pt-main-source .annotation:before {
+  content: "( ※";
+}
+.l-pt-main-source .annotation::after {
+  content: " )";
+}
 .l-pt-main-description {
   width: 100%;
   margin-bottom: 1.2vw;
@@ -515,6 +587,18 @@ index.html
   }
 }
 
+.l-pt-ichigojam {
+  font-family: 'ichigojam';
+}
+
+.l-pt-main-task {
+  padding: 2vw;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 1vw;
+  border-color: #eee;
+  margin-bottom: 2vw;
+}
 .l-pt-main-code {
   width: 100%;
   font-family: 'ichigojam';
@@ -525,15 +609,15 @@ index.html
   /* white-space: pre-wrap; */
   word-break: break-all;
   padding: 1vw 0;
-  margin: 0.5vw 0;
+  margin: 0.8vw 0 1vw;
 
   flex-direction: column;                                                      
   display: inline-flex; 
 }
 @media (min-width: 1280px) {
   .l-pt-main-code {
-    padding: 13px 0;
-    margin: 6px 0;
+      padding: 13px 0;
+      margin: 6px 0;
     }
 }
 
@@ -557,9 +641,36 @@ index.html
   background-color: #d0e6fd;
 }
 
+.l-pt-main-onepoint {
+  width: 100%;
+  height: auto;
+  background-color: #FF0601;
+  border-radius: 1vw;
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 1vw;
+  margin: 3vw auto;
+}
+
+.l-pt-main-onepoint div{
+  width: auto;
+  margin: 0vw auto;
+  width: 100%;
+  font-size: 3.2rem;
+  line-height: 2.1;
+  letter-spacing: 0.5rem;
+  color: #ffffff;
+}
+.l-pt-main-onepoint div:before{
+  content: "ワンポイント\A";
+  white-space: pre;
+  font-family: 'ichigojam';
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
 .l-pt-custom {
   width: 96%;
-  margin: 0 2%;
+  margin: 0 2% 13vw;
   font-size: 1.8rem;
   letter-spacing: 0.3rem;
   /* background-color: bisque; */
@@ -609,6 +720,11 @@ index.html
   content: counter(taskno) ". ";
   font-size: 2.8rem;
 }
+.l-pt-custom-item-task.task2:before {
+  counter-increment: taskno2;
+  content: counter(taskno2) ". ";
+  font-size: 2.8rem;
+}
 
 .l-pt-custom-item-task:after {
   top: 50%;
@@ -633,7 +749,6 @@ index.html
     margin-top: -9px;
   }
 }
-
 .l-pt-custom-item-task span.author {
   font-size: 0.9rem;
   margin-left: 4%;
@@ -645,7 +760,6 @@ index.html
 .l-pt-custom-item-task span.author::after {
   content:" added. -"
 }
-
 .l-pt-custom-item.open .l-pt-custom-item-task:after {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -654,6 +768,7 @@ index.html
 }
 .l-pt-custom-item-solution {
   padding:2.5vw 4%;
+  line-height: 2.3;
   display: none;
 }
 
@@ -679,4 +794,40 @@ index.html
   font-size: 1.2rem;
   line-height: 1;
   letter-spacing: 0.2rem;
+}
+
+.l-pt-triangle-bottom {
+  margin: -1.0vw auto 1.0vw;
+  width: 20px;
+  height: 20px;
+  border: 5px solid;
+  border-color: transparent #565656 #565656  transparent;
+  transform: rotate(45deg);
+}
+
+.l-pt-main-operation {
+  width: 100%;
+  height: auto;
+  border-width: 2px;
+  border-radius: 1vw;
+  border-color: #565656;
+  text-align: center;
+}
+.l-pt-main-operation p{
+  width: auto;
+  font-size: 2.0rem;
+  text-align: center;
+  line-height: 1.5;
+  margin: 1vw auto;
+}
+@media (min-width: 1280px) {
+  .l-pt-main-operation {
+    margin-bottom: 18px;
+  }
+}
+
+.l-pt-solid {
+  width: 30%;
+  size: 2px;
+  margin: 8vw auto;
 }
