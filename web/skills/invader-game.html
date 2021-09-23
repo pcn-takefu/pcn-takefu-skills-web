@@ -136,7 +136,6 @@
                                 <br>
                                 <input type="radio" id="200" name="code" value="70" class="">
                                 <label for="200">メインプログラム</label>
-                                <br>
                                 <input type="radio" id="210" name="code" value="70" class="">
                                 <label for="210">2 L=0</label>
                                 <input type="radio" id="220" name="code" value="70" class="">
@@ -198,64 +197,22 @@
                 <div class="l-pt-custom effect-fade">
                     <div class="l-pt-custom-item">
                         <div class="l-pt-custom-item-task">
-                            <ruby><rb>速</rb><rt>はや</rt></ruby>さを<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう
+                            <ruby><rb>敵キャラ</rb><rt>てききゃら</rt></ruby>をかえてみよう
                         </div>
                         <div class="l-pt-custom-item-solution">
                             <p>
-                                <code class="ichigojam">40 WAIT 3</code>　の3を<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう
+                                <ruby><rb>キャラクターコード</rb><rt>きゃらくたーこーど</rt></ruby>の <code class="ichigojam">110</code> や <code class="ichigojam">120</code><ruby> などを<rb>変更</rb><rt>へんこう</rt></ruby>してみよう<br>
+                                （例）<code class="ichigojam">110 POKE #700,#42,#42,#3C,#42,#A5,#81,#42,#3C</code>
                             </p>
                         </div>
                     </div>
                     <div class="l-pt-custom-item">
                         <div class="l-pt-custom-item-task">
-                            <ruby><rb>自分</rb><rt>じぶん</rt></ruby>や<ruby><rb>敵</rb><rt>てき</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>をかえてみよう
-                        </div>
-                        <div class="l-pt-custom-item-solution">
-                            <p><ruby><rb>自分</rb><rt>じぶん</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>は <code class="ichigojam">20</code> の <code class="ichigojam">"0"</code> をかえてみよう！！</p>
-                            <p><ruby><rb>敵</rb><rt>てき</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>は <code class="ichigojam">30</code> の <code class="ichigojam">"*"</code> をかえてみよう！！</p>
-                        </div>
-                    </div>
-                    <div class="l-pt-custom-item">
-                        <div class="l-pt-custom-item-task">
-                            <ruby><rb>得点</rb><rt>とくてん</rt></ruby>を<ruby><rb>表示</rb><rt>ひょうじ</rt></ruby>してみよう
+                            <ruby><rb>自分</rb><rt>じぶん</rt></ruby>の<ruby><rb>キャラ</rb><rt>きゃら</rt></ruby>をかえてみよう
                         </div>
                         <div class="l-pt-custom-item-solution">
                             <p>
-                                <code class="ichigojam">10 CLT:CLS:X=15</code>　のように、 <code class="ichigojam">CLT</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>してみよう<br>
-                                <code class="ichigojam">60 IF SCR(X,5) ?TICK():END</code>　のように、<br>
-                                <code class="ichigojam">?TICK():</code> を<ruby><rb>追加</rb><rt>ついか</rt>してみよう
-                            </p>
-                        </div>
-                    </div>
-                    <div class="l-pt-custom-item">
-                        <div class="l-pt-custom-item-task">
-                            <ruby><rb>敵キャラ</rb><rt>てききゃら</rt></ruby>を<ruby><rb>増</rb><rt>ふ</rt></ruby>やしてみよう
-                        </div>
-                        <div class="l-pt-custom-item-solution">
-                            <p>
-                                <ruby><rb>ヒント</rb><rt>ひんと</rt></ruby>は <code class="ichigojam">30</code> ． <code class="ichigojam">"*"</code> を<ruby><rb>増</rb><rt>ふ</rt></ruby>やしてみると...<br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="l-pt-custom-item">
-                        <div class="l-pt-custom-item-task">
-                            <ruby><rb>無敵ゾーン</rb><rt>むてきぞーん</rt></ruby>をなくしてみよう
-                        </div>
-                        <div class="l-pt-custom-item-solution">
-                            <p>
-                                <code class="ichigojam">65 X=(X+32)%32</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>するか、<br>
-                                <code class="ichigojam">65 IF X<0 OR X>32 END</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>してみよう<br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="l-pt-custom-item">
-                        <div class="l-pt-custom-item-task">
-                            <ruby><rb>今</rb><rt>いま</rt></ruby>の<ruby><rb>得点</rb><rt>とくてん</rt></ruby>を<ruby><rb>表示</rb><rt>ひょうじ</rt></ruby>してみよう
-                        </div>
-                        <div class="l-pt-custom-item-solution">
-                            <p>
-                                <code class="ichigojam">10 CLT:CLS:X=15</code>　のように、 <code class="ichigojam">CLT</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>し、<br>
-                                <code class="ichigojam">35 LC0,0:?"SCORE:";TICK()</code> を<ruby><rb>追加</rb><rt>ついか</rt></ruby>してみよう
+                                <ruby><rb>キャラクターコード</rb><rt>きゃらくたーこーど</rt></ruby>のどこかを<ruby><rb>変更</rb><rt>へんこう</rt></ruby>してみよう
                             </p>
                         </div>
                     </div>
