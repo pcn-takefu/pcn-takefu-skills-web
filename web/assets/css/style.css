@@ -175,10 +175,12 @@ code.ichigojam
     white-space: pre-wrap;
     word-break: break-all;
     padding: 0.8vw 1%;
+    margin:0 1%;
 }
 @media (min-width: 1280px) {
   code.ichigojam {
     padding: 10px 1%;
+    margin:0 1%;
   }
 }
 
@@ -675,6 +677,13 @@ index.html
   letter-spacing: 0.3rem;
   /* background-color: bisque; */
 }
+.l-pt-custom-middle {
+  width: 96%;
+  margin: 0 2% 5vw;
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+  /* background-color: bisque; */
+}
 
 .l-pt-custom-item {
   width: 100%;
@@ -773,7 +782,7 @@ index.html
 }
 
 .l-pt-footer {
-  position:absolute;
+  position:fixed;
   bottom: 0;
   width: 100%;
   height: auto;
