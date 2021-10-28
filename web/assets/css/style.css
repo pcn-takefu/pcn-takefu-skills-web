@@ -611,7 +611,7 @@ index.html
   /* white-space: pre-wrap; */
   word-break: break-all;
   padding: 1vw 0;
-  margin: 0.8vw 0 1vw;
+  margin: 0.8vw 0 3vw;
 
   flex-direction: column;                                                      
   display: inline-flex; 
@@ -668,6 +668,33 @@ index.html
   white-space: pre;
   font-family: 'ichigojam';
   font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+.l-pt-main-caution {
+  width: 100%;
+  height: auto;
+  background-color: #FF0601;
+  border-radius: 1vw;
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 1vw;
+  margin: 3vw auto;
+}
+
+.l-pt-main-caution div{
+  width: auto;
+  margin: 0vw auto;
+  width: 100%;
+  font-size: 3.2rem;
+  line-height: 2.1;
+  letter-spacing: 0.5rem;
+  color: #ffffff;
+}
+.l-pt-main-caution div:before{
+  content: "◆◆注意◆◆\A";
+  white-space: pre;
+  /* font-family: 'ichigojam'; */
+  font-size: 2.5rem;
   letter-spacing: 0.1rem;
 }
 .l-pt-custom {

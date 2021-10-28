@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>カムロボ（玉入れ）｜IchigoJam Skills｜PCN武生</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="IchigoJam BASIC でのプログラミングをしてカムロボで玉入れをしてみましょう。">
+    <meta property="og:title" content="カムロボ（玉入れ）｜IchigoJam Skills｜PCN武生">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pcntakefu.club/skills/camrobo.html">
+    <!-- <meta property="og:image" content="./assets/img/ogp/index.png"> -->
+    
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon-180x180.png" />
+
+    <link rel="stylesheet" href="../assets/css/style.css?211011124530">
+</head>
+
+<body>
+    <div class="l-pt-wrapper">
+        <header class="l-pt-header" data-current="first-view">
+            <div class="l-pt-header-wrap">
+                <div class="l-pt-header-menu">
+                </div>
+                <div class="l-pt-header-logo">
+                    <div class="l-pt-header-logo-en">
+                        <img src="../assets/img/logo_en.png" width="309" height="79" alt="PCN TAKEFU">
+                    </div>
+                    <div class="l-pt-header-logo-img">
+                        <img src="../assets/img/logo_temple.png" width="39" height="39" alt="PCN TAKEFU お寺">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article class="l-pt-article">
+            <div class="l-pt-wrap">
+                <div class="l-pt-pg-title-area">
+                    <div class="l-pt-pg-title">
+                        <h1><ruby><rb>カムロボ</rb><rt>かむろぼ</rt></ruby>で<ruby><rb>玉入</rb><rt>たまい</rt></ruby>れ</h1>
+                        <p class="l-pt-pg-version">1.1</p>
+                    </div>
+                    <div class="l-pt-ichigojamweb">
+                        <div class="l-pt-ichigojamweb-qr">
+                            <img src="../assets/img/qr/skill-camrobo-ballpass.png" width="222" height="222" alt="IchigoJam Web">
+                        </div>
+                        <div class="l-pt-ichigojamweb-qr-caption">
+                            <p>本プリントの</p>
+                            <p>QRコード</p>
+                        </div>
+                    </div>
+                    <div class="l-pt-ichigojamweb">
+                        <a href="https://fukuno.jig.jp/app/IchigoJam/" target="_blank" rel="noopener noreferrer">
+                            <div class="l-pt-ichigojamweb-qr">
+                                <img src="../assets/img/ichigojamweb-qr.png" width="222" height="222" alt="IchigoJam Web">
+                            </div>
+                            <div class="l-pt-ichigojamweb-qr-caption">
+                                <p>IchigoJam Web</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="001" class="l-pt-main">
+                <div class="l-pt-main-capture effect-fade">
+                    <div class="l-pt-main-image">
+                        <img src="../assets/img/arm-comrobo.png" width="640" height="480" alt="カムロボのアーム操作">
+                    </div>
+                    <div class="l-pt-main-source">
+                        <a href="https://na-s.jp/camrobo.html" target="_blank" rel="noopener noreferrer">
+                            <p>ナチュラルスタイルカムロボ部</p>
+                            <p>https://na-s.jp/camrobo.html</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="l-pt-main-contents effect-fade">
+                    <div class="l-pt-main-description">
+                        <p>
+                            <ruby><rb>スペースキー</rb><rt>すぺーすきー</rt>をおして、<ruby><rb>右アーム</rb><rt>みぎあーむ</rt>でなげる
+                        </p>
+                    </div>
+                    <div class="l-pt-main-code">
+                        <!-- <code class="language-ichigojam"> -->
+                        <input type="radio" id="1-10" name="code">
+                        <label for="1-10">10 PWM4,235:WAIT60:PWM4,0</label>
+                        <input type="radio" id="1-20" name="code">
+                        <label for="1-20">20 IF !BTN(32) CONT</label>
+                        <input type="radio" id="1-30" name="code">
+                        <label for="1-30">30 PWM4,130:WAIT180:PWM4,0</label>
+                        <input type="radio" id="1-40" name="code">
+                        <label for="1-40">40 GOTO10</label>
+                        <code style="display: none;">
+                            10 PWM4,130:WAIT60:PWM4,0
+                            20 IF !BTN(32) CONT
+                            30 PWM4,130:WAIT180:PWM4,0
+                            40 GOTO10
+                        </code>
+                    </div>
+                    <div class="l-pt-main-caution">
+                        <div>
+                            <p>
+                                <ruby><rb>カムロボ</rb><rt>かむろぼ</rt></ruby>の<ruby><rb>アーム</rb><rt>あーむ</rt></ruby>は
+                            </p>
+                            <p>
+                                <ruby><rb>頭</rb><rt>あたま</rt></ruby>の<ruby><rb>電源</rb><rt>でんげん</rt></ruby>を<ruby><rb>オフ</rb><rt>おふ</rt></ruby>にしてから
+                            </p>
+                            <p>
+                                <ruby><rb>動</rb><rt>うご</rt></ruby>かすこと！！
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="l-pt-custom-middle effect-fade">
+                    <div class="l-pt-custom-item">
+                        <div class="l-pt-custom-item-task">
+                            <ruby><rb>カムロボ</rb><rt>かむろぼ</rt></ruby>の<ruby><rb>電源ON</rb><rt>でんげんおん</rt></ruby>で<ruby><rb>自動実行</rb><rt>じどうじっこう</rt></ruby>してみよう
+                        </div>
+                        <div class="l-pt-custom-item-solution">
+                            <p>
+                                <code class="ichigojam">5 @ARUN</code>を<ruby><rb>追加</rb><rt>ついか</rt></ruby>してみよう。
+                            </p>
+                            <p>
+                                <ruby><rb>電源ON</rb><rt>でんげんおん</rt></ruby>で<ruby><rb>プログラム</rb><rt>ぷろぐらむ</rt></ruby>が<ruby><rb>自動</rb><rt>じどう</rt></ruby>でうごくので、<ruby><rb>止</rb><rt>と</rt></ruby>めたいときには、
+                                <code class="ichigojam">ESC</code><ruby><rb>キー</rb><rt>きー</rt></ruby>をおして<ruby><rb>止</rb><rt>と</rt></ruby>めてみよう。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="l-pt-custom-item">
+                        <div class="l-pt-custom-item-task">
+                            <ruby><rb>次</rb><rt>つぎ</rt></ruby>に<ruby><rb>投</rb><rt>な</rt></ruby>げられるまでの<ruby><rb>時間</rb><rt>じかん</rt></ruby>をかえてみよう
+                        </div>
+                        <div class="l-pt-custom-item-solution">
+                            <p>
+                                【<ruby><rb>ヒント</rb><rt>ひんと</rt></ruby>】 <code class="ichigojam">30</code><ruby><rb>番</rb><rt>ばん</rt></ruby>
+                            </p>
+                            <p>
+                                ちょっと<ruby><rb>待</rb><rt>ま</rt></ruby>つ<ruby><rb>コマンド</rb><rt>こまんど</rt></ruby>は<code class="ichigojam">WAIT</code>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="l-pt-custom-item">
+                        <div class="l-pt-custom-item-task">
+                            <ruby><rb>左アーム</rb><rt>ひだりあーむ</rt></ruby>も<ruby><rb>使</rb><rt>つか</rt></ruby>ってみよう
+                        </div>
+                        <div class="l-pt-custom-item-solution">
+                            <p>
+                                【<ruby><rb>ヒント</rb><rt>ひんと</rt></ruby>】 <code class="ichigojam">PWM3</code>
+                            </p>
+                            <p>
+                                <ruby><rb>右アーム</rb><rt>みぎあーむ</rt></ruby>との<ruby><rb>角度</rb><rt>かくど</rt></ruby>のちがいにも<ruby><rb>注意</rb><rt>ちゅうい</rt></ruby>してみよう
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr class="l-pt-solid">
+
+            <div id="002" class="l-pt-main">
+                <div class="l-pt-main-title effect-fade">
+                    <ruby>
+                        <p>
+                            0<ruby><rb>番</rb><rt>ばん</rt></ruby>の<ruby><rb>箱</rb><rt>はこ</rt></ruby>に<ruby><rb>セーブ</rb><rt>せーぶ</rt></ruby>して、<ruby><rb>カムロボ</rb><rt>かむろぼ</rt></ruby>へ
+                        </p>
+                    </ruby>
+                </div>
+                <div class="l-pt-main-capture effect-fade">
+                    <div class="l-pt-main-image">
+                        <img src="../assets/img/keyboard03.png" width="600" height="400" alt="キーボード">
+                    </div>
+                    <!-- <div class="l-pt-main-source">
+                        <a href="https://fukuno.jig.jp/img2/iotclass-handsout.pdf" target="_blank" rel="noopener noreferrer">
+                            <p>IchigoJamはじめのいっぽ</p>
+                            <p>https://fukuno.jig.jp/img2/iotclass-handsout.pdf</p>
+                        </a>
+                    </div> -->
+                </div>
+
+                <div class="l-pt-main-contents effect-fade">
+                    <div class="l-pt-main-description">
+                        <p>
+                            <ruby><rb>セーブ</rb><rt>せーぶ</rt></ruby>
+                        </p>
+                    </div>
+                    <div class="l-pt-main-task">
+                        <div class="l-pt-main-code">
+                            <input type="radio" id="700" name="code" value="5" class="">
+                            <label for="700">SAVE0</label>
+                            <code style="display: none;">
+                                SAVE0
+                            </code>
+                        </div>
+                        <div class="l-pt-main-operation">
+                            <p>
+                                ※<ruby><rb class="l-pt-ichigojam">F3</rb><rt>えふさん</rt></ruby><ruby><rb>キー</rb><rt>きー</rt></ruby>が<ruby><rb>便利</rb><rt>べんり</rt></ruby>
+                            </p>
+                        </div>
+                        <div class="l-pt-triangle-bottom"></div>
+                        <div class="l-pt-main-operation">
+                            <p>
+                                <ruby><rb class="l-pt-ichigojam">Enter</rb><rt>えんたー</rt></ruby><ruby><rb>キー</rb><rt>きー</rt></ruby>をおす
+                            </p>
+                            <p>
+                                ※したのように<ruby><rb>表示</rb><rt>ひょうじ</rt></ruby>されればOK
+                            </p>
+                        </div>
+                        <div class="l-pt-main-code">
+                            <input type="radio" id="701" name="code" value="5" class="">
+                            <label for="701">Saved 46byte</label>
+                        </div>
+                    </div>
+
+                    <div class="l-pt-main-description">
+                        <p>
+                            <ruby><rb>ロード</rb><rt>ろーど</rt></ruby>
+                        </p>
+                    </div>
+                    <div class="l-pt-main-task">
+                        <div class="l-pt-main-code">
+                            <input type="radio" id="800" name="code" value="5" class="">
+                            <label for="800">LOAD0</label>
+                            <code style="display: none;">
+                                LOAD0
+                            </code>
+                        </div>
+                        <div class="l-pt-main-operation">
+                            <p>
+                                ※<ruby><rb class="l-pt-ichigojam">F2</rb><rt>えふに</rt></ruby><ruby><rb>キー</rb><rt>きー</rt></ruby>が<ruby><rb>便利</rb><rt>べんり</rt></ruby>
+                            </p>
+                        </div>
+                        <div class="l-pt-triangle-bottom"></div>
+                        <div class="l-pt-main-operation">
+                            <p>
+                                <ruby><rb class="l-pt-ichigojam">Enter</rb><rt>えんたー</rt></ruby><ruby><rb>キー</rb><rt>きー</rt></ruby>をおす
+                            </p>
+                            <p>
+                                ※したのように<ruby><rb>表示</rb><rt>ひょうじ</rt></ruby>されればOK
+                            </p>
+                        </div>
+                        <div class="l-pt-main-code">
+                            <input type="radio" id="801" name="code" value="5" class="">
+                            <label for="801">Loaded 46byte</label>
+                        </div>
+                        <div class="l-pt-triangle-bottom"></div>
+                        <div class="l-pt-main-operation">
+                            <p>
+                                <ruby><rb class="l-pt-ichigojam">F4</rb><rt>えふよん</rt></ruby><ruby><rb>キー</rb><rt>きー</rt></ruby>で<ruby><rb>ロード</rb><rt>ろーど</rt></ruby>した<ruby><rb>プログラム</rb><rt>ぷろぐらむ</rt></ruby>を<ruby><rb>確認</rb><rt>かくにん</rt></ruby>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="l-pt-main-onepoint">
+                        <div>
+                            <p>
+                                <ruby><rb class="l-pt-ichigojam">SAVE</rb><rt>せーぶ</rt></ruby>は<ruby><rb class="l-pt-ichigojam">F3</rb><rt>えふさん</rt></ruby><ruby><rb>キー</rb><rt>きー</rt></ruby>
+                            </p>
+                            <p>
+                                <ruby><rb class="l-pt-ichigojam">LOAD</rb><rt>ろーど</rt></ruby>は<ruby><rb class="l-pt-ichigojam">F2</rb><rt>えふに</rt></ruby><ruby><rb>キー</rb><rt>きー</rt></ruby>
+                            </p>
+                            <p>
+                            が<ruby><rb>便利</rb><rt>べんり</rt></ruby>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="l-pt-solid">
+
+            <div id="003" class="l-pt-main">
+                <div class="l-pt-main-title effect-fade">
+                    <ruby>
+                        <p>
+                            【おまけ】
+                        </p>
+                    </ruby>
+                </div>
+                <div class="l-pt-main-capture effect-fade">
+                    <div class="l-pt-main-image">
+                        <img src="../assets/img/ope-camrobo.png" width="1354" height="1204" alt="カムロボの操作">
+                    </div>
+                    <div class="l-pt-main-source">
+                        <a href="https://na-s.jp/camrobo.html" target="_blank" rel="noopener noreferrer">
+                            <p>ナチュラルスタイルカムロボ部</p>
+                            <p>https://na-s.jp/camrobo.html</p>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="l-pt-main-contents effect-fade">
+                    <div class="l-pt-main-description">
+                        <p>
+                            <ruby><rb>前後</rb><rt>ぜんご</rt></ruby>をくりかえす
+                        </p>
+                    </div>
+                    <div class="l-pt-main-code">
+                        <!-- <code class="language-ichigojam"> -->
+                        <input type="radio" id="3-10" name="code" value="3-10" class="">
+                        <label for="3-10">10 OUT33:WAIT180</label>
+                        <input type="radio" id="3-20" name="code" value="3-20" class="">
+                        <label for="3-20">20 OUT18:WAIT180</label>
+                        <input type="radio" id="3-30" name="code" value="3-30" class="">
+                        <label for="3-30">30 GOTO10</label>
+                        <code style="display: none;">
+                            10 OUT33:WAIT180
+                            20 OUT0
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </article>
+
+
+        <!--固定ボタン-->
+        <a href="#top" class="topBtn" id="topBtn">トップへ</a>
+
+        <footer class="l-pt-footer">
+            <div class="l-pt-wrap">
+                <div class="l-pt-footer-copyright">
+                    <p>&copy;2021 PCN Takefu. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript" src="../assets/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.events.touch.min.js"></script>
+<script language="javascript" type="text/javascript">
+	jQuery(document).ready(function($) {
+        $('.l-pt-custom-item-task').click(function () {
+            $(this).parent('.l-pt-custom-item').toggleClass('open');
+            $(this).siblings('.l-pt-custom-item-solution').slideToggle();            
+        });
+        // 右下のTOPへ戻るボタン
+        $("#topBtn").hide();
+        $(window).on("scroll", function() {
+            if ($(this).scrollTop() > 100) {
+                $("#topBtn").fadeIn("fast");
+            } else {
+                $("#topBtn").fadeOut("fast");
+            }
+            scrollHeight = $(document).height();
+            scrollPosition = $(window).height() + $(window).scrollTop(); //現在地 
+            footHeight = $("footer").innerHeight(); //footerの高さ（＝止めたい位置）
+            if ( scrollHeight - scrollPosition  <= footHeight ) {
+                //footerに重なったら
+                $("#topBtn").css({
+                    "bottom": footHeight-(scrollHeight - scrollPosition) + 20
+                });
+            } else {
+                $("#topBtn").css({
+                    "bottom": "20px" //下から20px上げた位置に
+                });
+            }
+        });
+        $('#topBtn').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        });
+    });
+    // スクロールによる表示エフェクト
+    window.onload = function () {
+        scroll_effect();
+        $(window).scroll(function () {
+            scroll_effect();
+        });
+
+        function scroll_effect() {
+            $('.effect-fade, .effect-fade-left-delay, .effect-fade-right-delay, .effect-fade-right-delay2, .effect-fade-delay1, .effect-fade-delay2, .effect-fade-delay3, .effect-fade-delay4').each(function () {
+                var elemPos = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > elemPos - windowHeight) {
+                    $(this).addClass('effect-scroll');
+                }
+            });
+        }
+    };
+</script>
+
+</html>
