@@ -587,6 +587,13 @@ index.html
   }
 }
 
+.l-pt-main-code-header {
+  margin-top: 2vw;
+  margin-bottom: 0.5vw;
+  font-size: 1.8rem;
+  color: #7a7a7a
+}
+
 .l-pt-ichigojam {
   font-family: 'ichigojam';
 }
@@ -599,6 +606,7 @@ index.html
   border-color: #eee;
   margin-bottom: 2vw;
 }
+
 .l-pt-main-code {
   width: 100%;
   font-family: 'ichigojam';
