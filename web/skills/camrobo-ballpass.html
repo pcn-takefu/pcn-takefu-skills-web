@@ -93,7 +93,7 @@
                     <div class="l-pt-main-code">
                         <!-- <code class="language-ichigojam"> -->
                         <input type="radio" id="1-10" name="code">
-                        <label for="1-10">10 PWM4,235:WAIT60:PWM4,0</label>
+                        <label for="1-10">10 PWM4,230:WAIT60:PWM4,0</label>
                         <input type="radio" id="1-20" name="code">
                         <label for="1-20">20 IF !BTN(32) CONT</label>
                         <input type="radio" id="1-30" name="code">
@@ -108,6 +108,21 @@
                         </code>
                     </div>
                     <div class="l-pt-main-caution">
+                        <div class="l-pt-main-onepoint">
+                            <p>
+                                <ruby><rb>PCN武生</rb><rt>ぴーしーえぬたけふ</rt></ruby>の<ruby><rb>カムロボ</rb><rt>かむろぼ</rt></ruby>には、
+                                <br><ruby><rb>下記</rb><rt>かき</rt></ruby>の<ruby><rb>設定</rb><rt>せってい</rt></ruby>のものがいます
+                            </p>
+                            <p>
+                                <ruby><rb>左</rb><rt>ひだり</rt></ruby>：<span class="l-pt-ichigojam">PWM3,230〜PWM3,75</span>
+                            </p>
+                            <p>
+                                <ruby><rb>右</rb><rt>みぎ</rt></ruby>：<span class="l-pt-ichigojam">PWM4,75〜PWM4,230</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="l-pt-main-caution">
                         <div>
                             <p>
                                 <ruby><rb>カムロボ</rb><rt>かむろぼ</rt></ruby>の<ruby><rb>アーム</rb><rt>あーむ</rt></ruby>は
@@ -116,7 +131,7 @@
                                 <ruby><rb>頭</rb><rt>あたま</rt></ruby>の<ruby><rb>電源</rb><rt>でんげん</rt></ruby>を<ruby><rb>オフ</rb><rt>おふ</rt></ruby>にしてから
                             </p>
                             <p>
-                                <ruby><rb>動</rb><rt>うご</rt></ruby>かすこと！！
+                                <ruby><rb>動</rb><rt>うご</rt></ruby>かそう！！
                             </p>
                         </div>
                     </div>
@@ -163,6 +178,43 @@
                             <p>
                                 <ruby><rb>右アーム</rb><rt>みぎあーむ</rt></ruby>との<ruby><rb>角度</rb><rt>かくど</rt></ruby>のちがいにも<ruby><rb>注意</rb><rt>ちゅうい</rt></ruby>してみよう
                             </p>
+                        </div>
+                    </div>
+
+                    <div class="l-pt-custom-item">
+                        <div class="l-pt-custom-item-task">
+                            <ruby><rb>二刀流</rb><rt>にとうりゅう</rt></ruby>
+                        </div>
+                        <div class="l-pt-custom-item-solution">
+                            <div class="l-pt-main-code">
+                                <!-- <code class="language-ichigojam"> -->
+                                <input type="radio" id="11-10" name="code">
+                                <label for="11-10">10 PWM4,230:PWM3,75</label>
+                                <input type="radio" id="11-20" name="code">
+                                <label for="11-20">20 WAIT60:CLK</label>
+                                <input type="radio" id="11-30" name="code">
+                                <label for="11-30">30 PWM4,0:PWM3,0</label>
+                                <input type="radio" id="11-40" name="code">
+                                <label for="11-40">40 IF !BTN(32) CONT</label>
+                                <input type="radio" id="11-50" name="code">
+                                <label for="11-50">50 PWM4,130:PWM3,175</label>
+                                <input type="radio" id="11-60" name="code">
+                                <label for="11-60">60 WAIT180</label>
+                                <input type="radio" id="11-70" name="code">
+                                <label for="11-70">70 PWM4,0:PWM3,0</label>
+                                <input type="radio" id="11-80" name="code">
+                                <label for="11-80">80 GOTO10</label>
+                                <code style="display: none;">
+                                    10 PWM4,230:PWM3,75
+                                    20 WAIT60:CLK
+                                    30 PWM4,0:PWM3,0
+                                    40 IF !BTN(32) CONT
+                                    50 PWM4,130:PWM3,175
+                                    60 WAIT180
+                                    70 PWM4,0:PWM3,0
+                                    80 GOTO10
+                                </code>
+                            </div>
                         </div>
                     </div>
 

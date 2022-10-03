@@ -184,6 +184,16 @@ code.ichigojam
   }
 }
 
+.red {
+  color:red;
+}
+.green {
+  color:green
+}
+.blue {
+  color:blue;
+}
+
 /* ======================================================================
 EFFECT
 ========================================================================= */
@@ -411,6 +421,10 @@ index.html
   border-width: 2px;
   border-style: solid;
 }
+.l-pt-pg-menu-area ul li:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .l-pt-pg-menu-area ul li a {
 	color: #000;
 	display: block;
@@ -418,9 +432,6 @@ index.html
 	padding-top: 1vw;
 	padding-bottom: 1vw;
 	text-decoration: none;
-}
-.l-pt-pg-menu-area ul li a:hover {
-  opacity: 0.5;
 }
 
 .l-pt-pg-title {
@@ -511,6 +522,12 @@ index.html
     -moz-box-pack: center;
   }
 }
+.l-pt-main.flex-row {
+  flex-direction: row;
+  justify-content: start;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+}
 
 .l-pt-main-contents {
   width: 60%;
@@ -526,7 +543,9 @@ index.html
     width: 90%;
   }
 }
-
+.l-pt-main-contents.wide {
+  width: 90%;
+}
 .l-pt-main-title {
   width: 96%;
   margin: 1vw auto;
@@ -589,6 +608,40 @@ index.html
   }
 }
 
+.l-pt-main-homework {
+  width: 100%;
+  margin-bottom: 1.2vw;
+  font-size: 2.0rem;
+  line-height: 1.5;
+  font-size: 2.8rem;
+}
+@media (min-width: 1280px) {
+  .l-pt-main-homework {
+    margin-bottom: 18px;
+  }
+}
+ul.l-pt-main-homework {
+  padding-bottom: 1em;
+}
+ul.l-pt-main-homework li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:flex-start;
+  justify-content: start;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  padding-bottom: 0.8em;
+}
+ul.l-pt-main-homework li div.number {
+  font-size: 3.6rem;
+  padding-right: 1%;
+  width:10%;
+}
+ul.l-pt-main-homework li div.item {
+  width:90%;
+}
+
 .l-pt-main-code-header {
   margin-top: 2vw;
   margin-bottom: 0.5vw;
@@ -599,7 +652,10 @@ index.html
 .l-pt-ichigojam {
   font-family: 'ichigojam';
 }
-
+.l-pt-ichigojam-small {
+  font-family: 'ichigojam';
+  font-size: 2.8rem;
+}
 .l-pt-main-task {
   padding: 2vw;
   border-width: 2px;
@@ -619,7 +675,7 @@ index.html
   /* white-space: pre-wrap; */
   word-break: break-all;
   padding: 1vw 0;
-  margin: 0.8vw 0 3vw;
+  margin: 0.8vw 0 1vw;
 
   flex-direction: column;                                                      
   display: inline-flex; 
@@ -841,7 +897,7 @@ index.html
 }
 
 .l-pt-triangle-bottom {
-  margin: -1.0vw auto 1.0vw;
+  margin: 0vw auto 2.0vw;
   width: 20px;
   height: 20px;
   border: 5px solid;
@@ -874,4 +930,10 @@ index.html
   width: 30%;
   size: 2px;
   margin: 8vw auto;
+}
+
+span.big {
+  font-size: 3.8rem;
+  padding-left: 1%;
+  padding-right: 1%;
 }
